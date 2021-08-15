@@ -3,15 +3,13 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <input type="button" value="night" onclick="
+  <script>
+  function nightDayHandler(self) {
     var target = document.querySelector('body');
-    if(this.value === 'night'){
+    if(self.value === 'night'){
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      this.value = 'day';
+      self.value = 'day';
 
       var alist = document.querySelectorAll('a');
       var i = 0; 
@@ -35,6 +33,13 @@
     
       }
     }
+  }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);    
   ">
 
   <ol>
