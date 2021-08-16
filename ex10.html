@@ -33,5 +33,15 @@
             document.write(key +':'+coworkers[key]+'<br>');
         }
     </script>
+    <h2>Property&Method 객체에는 함수도 담을 수 있다.</h2>
+    <script>
+        coworkers.showAll = function() {
+            for(var key in this) {
+                document.write(key+' : '+this[key]+'<br>');
+            }
+        }
+        coworkers.showAll();
+    </script>
+    
 </body>
 </html>
